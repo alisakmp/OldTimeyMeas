@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <script>
+        function miles()//run does something in JS so CANT call it run
+        {
+          var x = document.getElementById('number').value;
+          x = parseInt(x);
+
+          var nums = "Miles to Furlongs  <br><hr><br>";
+		  var conv = 0;
+          for(var i = 1; i <= x; i++)//internal vars cannot change outside loop
+          {
+		     conv =   conv + 8;
+            nums = nums + i + " --- " + conv + "<br>";
+          }
+          document.getElementById("result").innerHTML = nums;
+		  
+		 }
+		function slugs()
+		{
+			var x = document.getElementById("num2").value;
+			x = parseInt (x);
+			
+			var nums = "Slugs to Pounds <br><hr><br>";
+			var conv = 0;
+			for(var i = 1; i <= x; i++)
+			{
+				conv = conv + 32.174;
+				nums = nums + i + "--" + conv + "<br>";
+			}
+			document.getElementById("res2").innerHTML = nums; 
+			
+		}
+		function fortnights()
+		{
+			var x = document.getElementById("num3").value;
+			x = parseInt (x);
+			
+			var nums = "Fortnights to Days <br><hr><br>";
+			var conv = 0;
+			for(var i = 1; i <= x; i++)
+			{
+				conv = conv + 14;
+				nums = nums + i + "--" + conv + "<br>";
+			}
+			document.getElementById("res3").innerHTML = nums; 
+
+		}
+        
+    </script>
+	<style>
+	  h1{
+            font-size: 100px;
+            color: #781234;
+         }
+         p{
+           font-style: italic;
+           font-family: sans-serif;
+           color: #991299;
+	</style>
+  </head>
+  <body>
+     <h1>Old Timey Unit Conversions</h1>
+	 <p> Just a few really old measurements:)</p>
+     <input type = "text" id = "number">
+	 <input type = "text" id = "num2">
+	 <input type = "text" id = "num3">
+	 <br><hr>
+     <input type = "button" value = "OK" onclick = "miles()">
+	 <br><hr>
+	
+	 <input type = "button" value = "THIS" onclick = "slugs()">
+	 <br><hr>
+	 <input type = "button" value = "OR THIS" onclick = "fortnights()">
+	 
+	 
+     <br><hr><br>
+     <p id = "result"></p>
+	     <p id = "res2"></p>
+     <p id = "res3"></p>
+
+  </body>
+</html>
